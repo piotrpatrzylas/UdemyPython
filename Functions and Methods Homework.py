@@ -52,7 +52,8 @@ def multiply(numbers):
 # Note: A palindrome is word, phrase, or sequence that reads the same backward as forward, e.g., madam or nurses run.
 
 def palindrome(s):
-    pass
+    s_rev = s[::-1]
+    return s == s_rev
 
 # Hard:
 # Write a Python function to check whether a string is pangram or not.
@@ -62,4 +63,4 @@ def palindrome(s):
 
 import string
 def ispangram(str1, alphabet=string.ascii_lowercase):
-    pass
+    return set(alphabet) <= set(str1.lower())
